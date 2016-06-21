@@ -88,14 +88,8 @@ $(document).ready(function () {
         if (!gameOver && player == 2) {
             var boardPos = null;
             playerAI.setCurrentPlayer(player);
-            if (count >= 3) {
-                playerAI.setGameTreeDepth(0);
-                boardPos = playerAI.getAITurn();
-            }
-            else {
-                boardPos = playerAI.getPerfectPlayerBoardPos();
-                /*console.log("///" + boardPos);*/
-            }
+            playerAI.setGameTreeDepth(0);
+            boardPos = playerAI.getAITurn();
             markOnBoard(boardPos);
         }
     }
